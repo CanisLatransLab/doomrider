@@ -1,17 +1,26 @@
-import Image from 'next/image';
-import wansu from '../public/assets/wonsuHero.jpg';
-import logo from '../public/assets/doom-logo.png';
+import { SwipeCarousel } from '@/components/SwipeCarousel';
+import cloudinary from 'cloudinary';
+import DoomriderLogo from '@/components/navbar/DoomriderLogo';
 
-export default function Home() {
+async function Home() {
+  const results = await cloudinary.v2.search
+    .expression('folder=Projects/Main')
+    .sort_by('public_id', 'desc')
+    .max_results(40)
+    .execute();
+
+  const imgs = results.resources.map((img) => img.secure_url);
+
   return (
-    <main className='bg-[#363636] h-screen grid place-content-center '>
-      <div className='max-w-[50rem]'>
-        <Image src={logo} alt='Doomrider' />
-        <Image src={wansu} alt='Doomrider' />
+    <main className='w-full flex flex-col h-screen sm:grid place-content-center'>
+      <div className='w-full max-w-[120rem] max-sm:flex flex-col'>
+        <div className='p-[2rem] mx-auto'>
+          <DoomriderLogo />
+        </div>
+        <SwipeCarousel imgs={imgs} />
       </div>
-      <h1 className=' text-white text-3xl text-center mt-[3vh]'>
-        coming soon ...
-      </h1>
     </main>
   );
 }
+
+export default Home;
