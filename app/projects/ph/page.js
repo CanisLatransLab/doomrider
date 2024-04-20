@@ -3,7 +3,7 @@ import Ph from './Ph';
 
 async function phPage() {
   const results = await cloudinary.v2.search
-    .expression('folder=Projects/Naples')
+    .expression('folder=Projects/PH')
     .sort_by('public_id', 'desc')
     .max_results(40)
     .execute();
