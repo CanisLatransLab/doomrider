@@ -76,20 +76,23 @@ export default function Sidebar() {
                   <Link href='/projects/bristol-punx'>
                     <p>Bristol Punx</p>
                   </Link>
-                  <Link href='/projects/dlh'>
-                    <p>DLH</p>
-                  </Link>
-                  <Link href='/projects/imnotfromhere'>
-                    <p>I'm not from here</p>
+                  <Link href='/projects/ph'>
+                    <p>PH</p>
                   </Link>
                   <Link href='/projects/nooneisillegal'>
                     <p>No one is illegal</p>
                   </Link>
+                  <Link href='/projects/thank-you-nhs'>
+                    <p>Thank You NHS</p>
+                  </Link>
+                  <Link href='/projects/dlh'>
+                    <p>DLH</p>
+                  </Link>
                   <Link href='/projects/naples'>
                     <p>Naples</p>
                   </Link>
-                  <Link href='/projects/ph'>
-                    <p>PH</p>
+                  <Link href='/projects/imnotfromhere'>
+                    <p>I'm not from here</p>
                   </Link>
                   <Link href='/projects/poland'>
                     <p>Poland</p>

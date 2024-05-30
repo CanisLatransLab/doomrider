@@ -49,23 +49,23 @@ export default function About() {
               Maciek Mastalerz
             </motion.h2>
             <motion.p variants={item}>
-              Born in Poland and now based in Bristol, UK, Maciek has been a
-              devoted fan of hardcore punk for two decades. This intense passion
-              has seamlessly blended with Maciek’s talent for photography,
-              becoming the focal point of their creative expression.
+              Originally from Poland and now based in Bristol, UK, Maciek has
+              been a hardcore punk enthusiast for two decades. This deep love
+              seamlessly merges with Maciek's knack for photography, which has
+              become the foundation of their creative expression.
             </motion.p>
             <motion.p variants={item}>
-              With a keen eye for raw energy and an innate connection to the
-              genre's spirit, Maciek captures the essence of hardcore and punk
-              through the lens. From documenting mosh pit intensity to the
-              camaraderie of fans, Maciek’s photography serves as a visual
-              journey into the heart of the DIY scene.
+              With a sharp eye for raw energy and a deep connection to the
+              genre's ethos, Maciek captures the essence of hardcore and punk
+              through their lens. From capturing the intensity of mosh pits to
+              the camaraderie among fans, Maciek’s photography takes viewers on
+              a visual journey into the heart of the DIY scene.
             </motion.p>
             <motion.p variants={item}>
-              Navigating the punk scenes in both Poland and the UK, Maciek
-              remains a dedicated contributor to the hardcore/punk community.
-              Through their lens, they immortalize the unfiltered authenticity,
-              passion, and individuality that define this dynamic subculture.
+              Having explored punk scenes in both Poland and the UK, Maciek
+              remains a committed member of the hardcore/punk community. Through
+              their photography, they immortalize the unfiltered authenticity,
+              passion, and individuality that define this vibrant subculture.
             </motion.p>
           </motion.div>
           <Link href='/' className='self-end pt-28'>

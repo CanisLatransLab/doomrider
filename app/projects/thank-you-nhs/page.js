@@ -1,9 +1,9 @@
 import cloudinary from 'cloudinary';
-import ImNotFromHere from './ImNotFromHere';
+import NHS from './NHS';
 
-async function iNfHpage() {
+async function polandPage() {
   // const results = await cloudinary.v2.search
-  //   .expression(`folder=Projects/I'mNotFromHere`)
+  //   .expression('folder=Projects/Poland')
   //   .sort_by('public_id', 'desc')
   //   .max_results(40)
   //   .execute();
@@ -12,7 +12,7 @@ async function iNfHpage() {
 
   // Fetch results from Cloudinary
   const results = await cloudinary.search
-    .expression(`folder=Projects/I'mNotFromHere`)
+    .expression('folder=Projects/ThankYouNHS')
     .max_results(40)
     .execute();
 
@@ -27,16 +27,18 @@ async function iNfHpage() {
     return extractNumber(a.public_id) - extractNumber(b.public_id);
   });
 
+  console.log(results);
+
   return (
     <>
-      <ImNotFromHere data={results} />
+      <NHS data={results} />
     </>
   );
 }
 
 export const metadata = {
-  title: `DoomriderMedia | I'm Not From Here`,
+  title: `DoomriderMedia | Thank You NHS`,
   description: 'Doomrider&apos;s personal website',
 };
 
-export default iNfHpage;
+export default polandPage;

@@ -1,7 +1,16 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
-const Modal = ({ isOpen, setIsOpen, url }) => {
+const Modal = ({ isOpen, setIsOpen, url, imgWidth, imgHeight }) => {
+  const [isLandscape, setIsLandscape] = useState(null);
+
+  useEffect(() => {
+    if (imgWidth && imgHeight) {
+      setIsLandscape(imgWidth > imgHeight);
+    }
+  }, [imgWidth, imgHeight]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -17,15 +26,13 @@ const Modal = ({ isOpen, setIsOpen, url }) => {
             transition={{ type: 'tween', duration: 0.3 }}
             exit={{ scale: 0 }}
             className='p-6 rounded-lg w-full cursor-default relative overflow-hidden'>
-            <div className=''>
-              <Image
-                src={url}
-                alt='modal image'
-                width={700}
-                height={800}
-                className='max-sm:w-[30rem] max-md:w-[60rem] mx-auto max-w-[80rem]'
-              />
-            </div>
+            <Image
+              src={url}
+              alt='modal image'
+              width={imgWidth}
+              height={imgHeight}
+              className={`mx-auto ${isLandscape ? 'w-[110rem]' : `w-[70rem]`} `}
+            />
           </motion.div>
         </motion.div>
       )}

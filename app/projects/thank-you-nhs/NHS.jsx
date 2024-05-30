@@ -1,7 +1,7 @@
 import ProjectBody from '@/components/ProjectBody';
 
-function Dlh({ data }) {
+function NHS({ data }) {
   return <ProjectBody data={data} />;
 }
 
-export default Dlh;
+export default NHS;
