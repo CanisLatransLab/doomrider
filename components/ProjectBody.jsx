@@ -6,7 +6,7 @@ import Modal from '@/components/Modal';
 import { useState } from 'react';
 import DoomriderLogo from '@/components/navbar/DoomriderLogo';
 
-function ProjectBody({ data }) {
+function ProjectBody({ data, title }) {
   const [isOpen, setIsOpen] = useState(false);
   const [img, setImg] = useState('');
   const [imgWidth, setImgWidth] = useState('');
@@ -35,7 +35,11 @@ function ProjectBody({ data }) {
         imgHeight={imgHeight}
         imgAspect={imgAspect}
       />
-      <div className='max-sm:pt-[8rem] sm:pl-[8rem] grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5'>
+
+      <h1 className='max-sm:pt-[5rem] text-[4rem] font-bold mx-auto text-primary'>
+        {title}
+      </h1>
+      <div className=' sm:pl-[8rem] grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5'>
         {data.resources.map((image, i) => (
           <MotionWrapper
             key={image.public_id}
