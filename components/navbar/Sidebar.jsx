@@ -9,7 +9,6 @@ import Link from 'next/link';
 import NavIconClosed from './NavIconClosed';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { menuSlide, slide } from './anim';
-import useMeasure from 'react-use-measure';
 
 export default function Sidebar() {
   const isFirstRender = useRef(true);
@@ -103,6 +102,14 @@ export default function Sidebar() {
                 <Link href='/about'>
                   <h3 className='nav-trans'>ABOUT</h3>
                 </Link>
+              </div>
+              <div className='flex items-center py-8'>
+                <a
+                  href='https://doomridermedia.bigcartel.com/'
+                  rel='noreferrer'
+                  target='_blank'>
+                  <h3 className='nav-trans'>SHOP</h3>
+                </a>
               </div>
               <div className='py-8'>
                 <h3 className='nav-trans'>CONTACT</h3>
